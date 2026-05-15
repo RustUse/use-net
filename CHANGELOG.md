@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## [0.1.0](https://github.com/RustUse/use-net/releases/tag/use-net-v0.1.0) - 2026-05-15
+
+### Changed
+
+- Initial use-net workspace and crates
+
 ### Added
 
 - Added the initial `use-net` multi-crate workspace with focused crates for IP addresses, ports,
