@@ -1,0 +1,60 @@
+[workspace]
+members = [
+    "crates/use-net",
+    "crates/use-ip",
+    "crates/use-port",
+    "crates/use-host",
+    "crates/use-domain",
+    "crates/use-dns",
+    "crates/use-socket",
+    "crates/use-tcp",
+    "crates/use-udp",
+    "crates/use-cidr",
+    "crates/use-mac",
+]
+resolver = "3"
+
+[workspace.package]
+authors = ["RustUse Contributors"]
+edition = "2024"
+homepage = "https://rustuse.org"
+documentation = "https://rustuse.org"
+license = "MIT OR Apache-2.0"
+publish = false
+readme = "README.md"
+repository = "https://github.com/RustUse/use-net"
+rust-version = "1.95.0"
+version = "0.1.0"
+
+[workspace.dependencies]
+use-net = { version = "0.1.0", path = "crates/use-net" }
+use-ip = { version = "0.1.0", path = "crates/use-ip" }
+use-port = { version = "0.1.0", path = "crates/use-port" }
+use-host = { version = "0.1.0", path = "crates/use-host" }
+use-domain = { version = "0.1.0", path = "crates/use-domain" }
+use-dns = { version = "0.1.0", path = "crates/use-dns" }
+use-socket = { version = "0.1.0", path = "crates/use-socket" }
+use-tcp = { version = "0.1.0", path = "crates/use-tcp" }
+use-udp = { version = "0.1.0", path = "crates/use-udp" }
+use-cidr = { version = "0.1.0", path = "crates/use-cidr" }
+use-mac = { version = "0.1.0", path = "crates/use-mac" }
+
+[workspace.metadata.rustuse.release]
+publish = false
+versioning = "lockstep-0.x"
+first-publish-candidates = [
+    "use-ip",
+    "use-port",
+    "use-host",
+    "use-domain",
+    "use-dns",
+    "use-socket",
+    "use-tcp",
+    "use-udp",
+    "use-cidr",
+    "use-mac",
+    "use-net",
+]
+
+[workspace.lints.rust]
+unsafe_code = "forbid"

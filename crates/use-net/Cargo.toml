@@ -1,0 +1,57 @@
+[package]
+name = "use-net"
+description = "Umbrella crate for the RustUse networking primitives workspace."
+publish = true
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+readme = "README.md"
+rust-version.workspace = true
+keywords = ["network", "ip", "socket", "dns"]
+
+[features]
+default = []
+ip = ["dep:use-ip"]
+port = ["dep:use-port"]
+host = ["dep:use-host"]
+domain = ["dep:use-domain"]
+dns = ["dep:use-dns"]
+socket = ["dep:use-socket"]
+tcp = ["dep:use-tcp"]
+udp = ["dep:use-udp"]
+cidr = ["dep:use-cidr"]
+mac = ["dep:use-mac"]
+full = [
+    "ip",
+    "port",
+    "host",
+    "domain",
+    "dns",
+    "socket",
+    "tcp",
+    "udp",
+    "cidr",
+    "mac",
+]
+
+[dependencies]
+use-ip = { workspace = true, optional = true }
+use-port = { workspace = true, optional = true }
+use-host = { workspace = true, optional = true }
+use-domain = { workspace = true, optional = true }
+use-dns = { workspace = true, optional = true }
+use-socket = { workspace = true, optional = true }
+use-tcp = { workspace = true, optional = true }
+use-udp = { workspace = true, optional = true }
+use-cidr = { workspace = true, optional = true }
+use-mac = { workspace = true, optional = true }
+
+[lints]
+workspace = true
+
+[package.metadata.docs.rs]
+all-features = true

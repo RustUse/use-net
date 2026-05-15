@@ -1,0 +1,20 @@
+[package]
+name = "use-cidr"
+description = "CIDR parsing and prefix validation helpers for RustUse."
+publish = true
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
+readme = "README.md"
+rust-version.workspace = true
+keywords = ["cidr", "ip", "network", "prefix"]
+
+[lints]
+workspace = true
+
+[package.metadata.docs.rs]
+all-features = true

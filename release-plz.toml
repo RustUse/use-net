@@ -1,0 +1,93 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-ip"
+release = true
+version_group = "rustuse-net"
+
+[[package]]
+name = "use-port"
+release = true
+version_group = "rustuse-net"
+
+[[package]]
+name = "use-host"
+release = true
+version_group = "rustuse-net"
+
+[[package]]
+name = "use-domain"
+release = true
+version_group = "rustuse-net"
+
+[[package]]
+name = "use-dns"
+release = true
+version_group = "rustuse-net"
+
+[[package]]
+name = "use-socket"
+release = true
+version_group = "rustuse-net"
+
+[[package]]
+name = "use-tcp"
+release = true
+version_group = "rustuse-net"
+
+[[package]]
+name = "use-udp"
+release = true
+version_group = "rustuse-net"
+
+[[package]]
+name = "use-cidr"
+release = true
+version_group = "rustuse-net"
+
+[[package]]
+name = "use-mac"
+release = true
+version_group = "rustuse-net"
+
+[[package]]
+name = "use-net"
+release = true
+version_group = "rustuse-net"
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+changelog_include = [
+  "use-ip",
+  "use-port",
+  "use-host",
+  "use-domain",
+  "use-dns",
+  "use-socket",
+  "use-tcp",
+  "use-udp",
+  "use-cidr",
+  "use-mac",
+]
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+  { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+  { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+  { message = "^security(?:\\([^)]+\\))?!?: .+", group = "Security" },
+  { message = "^(?:refactor|perf|change)(?:\\([^)]+\\))?!?: .+", group = "Changed" },
+  { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+  { message = "^(?:build|ci|chore|deps|test)(?:\\([^)]+\\))?!?: .+", group = "Tooling" },
+  { footer = "^changelog: ?ignore$", skip = true },
+  { message = "^.*", group = "Changed" },
+]
