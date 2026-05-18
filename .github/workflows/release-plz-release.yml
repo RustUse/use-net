@@ -1,6 +1,6 @@
 name: Release Publish Automation
 
-on:
+"on":
     push:
         branches:
             - main
@@ -27,8 +27,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             PUBLISHED_CRATES: >-
-                use-ip use-port use-host use-domain use-dns
-                use-socket use-tcp use-udp use-cidr use-mac use-net
+              use-ip use-port use-host use-domain use-dns use-socket use-tcp use-udp use-cidr use-mac use-net
         steps:
             - name: Check out repository
               uses: actions/checkout@v4
