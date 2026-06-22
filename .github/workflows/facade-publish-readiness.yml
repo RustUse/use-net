@@ -21,7 +21,7 @@ jobs:
         use-ip use-port use-host use-domain use-dns use-socket use-tcp use-udp use-cidr use-mac
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Install stable Rust toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
